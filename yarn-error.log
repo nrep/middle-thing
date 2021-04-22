@@ -1,0 +1,33 @@
+Arguments: 
+  C:\Program Files\nodejs\node.exe C:\Users\MAK\AppData\Roaming\npm\node_modules\yarn\bin\yarn.js add caporal
+
+PATH: 
+  C:\Program Files\WindowsApps\Microsoft.WindowsTerminal_1.6.10571.0_x64__8wekyb3d8bbwe;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\OpenJDK\openjdk-8u282-b08\bin;C:\Users\MAK\AppData\Local\Programs\Python\Python39\Scripts\;C:\Users\MAK\AppData\Local\Programs\Python\Python39\;C:\Users\MAK\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\MAK\AppData\Roaming\npm;C:\Users\MAK\AppData\Local\Microsoft\WindowsApps
+
+Yarn version: 
+  1.22.10
+
+Node version: 
+  14.16.0
+
+Platform: 
+  win32 x64
+
+Trace: 
+  Error: connect ENETUNREACH 104.16.16.35:443
+      at TCPConnectWrap.afterConnect [as oncomplete] (net.js:1146:16)
+
+npm manifest: 
+  {
+    "name": "middle-thing",
+    "version": "0.0.1",
+    "main": "index.js",
+    "author": "Elvis Peace NDAHAYO RUGERO",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

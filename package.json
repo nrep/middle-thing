@@ -1,0 +1,16 @@
+{
+  "name": "middle-thing",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Elvis Peace NDAHAYO RUGERO",
+  "license": "MIT",
+  "bin": {
+    "scaffold": "index.js"
+  },
+  "dependencies": {
+    "caporal": "^1.4.0",
+    "colors": "^1.4.0",
+    "prompt": "^1.1.0",
+    "shelljs": "^0.8.4"
+  }
+}

@@ -93,4 +93,42 @@ const createModels = () => {
   });
 }
 
-module.exports = { createCollectionCode }
+const getSchemas = () => {
+  const schemas = {};
+  const tags = [];
+
+  const fs = require("fs");
+
+  if (fs.existsSync("./src/index.js")) {
+    const { mongooseConnection } = require("./src");
+    const models = mongooseConnection.models;
+    for (const key in models) {
+      if (Object.hasOwnProperty.call(models, key)) {
+        const model = models[key];
+        schemas[model.modelName] = { type: 'object' }
+        schemas[model.modelName]["properties"] = {};
+
+        tags.push({ name: model.modelName.toLowerCase(), description: `${model.modelName} related endpoints` });
+
+        const paths = model.schema.paths
+
+        for (const key in paths) {
+          if (Object.hasOwnProperty.call(paths, key)) {
+            const path = paths[key];
+
+            let type = path.instance;
+            let elpath = path.path;
+
+            if (type === 'ObjectID' || type === 'Date' || type === 'String') type = 'string'
+            if (type === 'Number') type = 'number'
+
+            if (elpath !== "__v") schemas[model.modelName]["properties"][elpath] = { type }
+          }
+        }
+      }
+    }
+  }
+  return { schemas, tags };
+}
+
+module.exports = { createCollectionCode, getSchemas }

@@ -11,13 +11,17 @@
     "license": "[LICENSE]",
     "dependencies": {
         "@babel/generator": "^7.13.9",
+        "debug": "^4.3.1",
         "dotenv": "^8.2.0",
         "fastify": "^3.14.1",
         "fastify-cors": "^5.2.0",
         "fastify-formbody": "^5.0.0",
         "fastify-mongoose-api": "^1.1.7",
+        "fastify-plugin": "^3.0.0",
         "fastify-print-routes": "^0.4.1",
         "fastify-swagger": "^4.7.0",
+        "mongoose": "^5.12.5",
+        "mongoose-autopopulate": "^0.13.0",
         "simple-json-db": "^1.2.3"
     },
     "devDependencies": {
